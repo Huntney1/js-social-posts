@@ -58,7 +58,7 @@ const posts = [
 
 let itemsContent = '';
 let profile_pic
-//Milestone2 
+//Milestone 2 
 posts.forEach((element) => {
     //Bonus 1 
     const date = element.created;
