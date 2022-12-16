@@ -123,12 +123,12 @@ const iLikes = document.getElementsByClassName('js-like-button')
 //Milestone 3 Bonus 3 Tasto like
 const arrayLike=[];
 for (let i = 0; i < iLikes.length; i++){
-    iLikes[i].addEventListener('click',function(){
+    iLikes[i].addEventListener('click',function(e){
         iLikes[i].classList.add("like-button--liked")
         const postId = this.dataset.postid
         const likes = document.getElementById(`like-counter-${postId}`)
         const likesNumber = parseInt(likes.innerText)
-
+        e.preventDefault();
         if(arrayLike.includes(postId)){
 
             likes.innerText = likesNumber-1;
