@@ -71,9 +71,9 @@ posts.forEach((element) => {
         const arrayNome = text.split(" ");
         let nome = arrayNome[0];
         let cognome = arrayNome[1];
-        let letteraNome = nome.charAt(0);S
+        let letteraNome = nome.charAt(0);
         let letteraCognome = cognome.charAt(0);
-        profile_pic = `<h2 class ="profile-pic-defaultS">${letteraNome}${letteraCognome}</h2>`
+        profile_pic = `<h2 class ="profile-pic-default">${letteraNome}${letteraCognome}</h2>`
     }
     else{
         profile_pic = `<img class="profile-pic" src="${element.author.image}" alt= "Phil Mangione">`
@@ -129,7 +129,7 @@ for (let i = 0; i < iLikes.length; i++){
         const likes = document.getElementById(`like-counter-${postId}`)
         const likesNumber = parseInt(likes.innerText)
         e.preventDefault();
-
+        
         if(arrayLike.includes(postId)){
 
             likes.innerText = likesNumber-1;
